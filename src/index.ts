@@ -1,7 +1,7 @@
 import { readFile, utils } from "xlsx";
 
 // Read all data in excel file or csv file
-export const readExcel = (fileName: string, sheetName?: string) => {
+export const readSpreadSheet = (fileName: string, sheetName?: string) => {
   const workbook = readFile(fileName, {
     type: "binary",
   });

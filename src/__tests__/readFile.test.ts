@@ -1,12 +1,12 @@
-import { readCellValue, readColumns, readExcel } from '../index';
+import { readCellValue, readColumns, readSpreadSheet } from '../index';
 
 test('read excel file', () => {
-    const rows = readExcel("src/__tests__/resources/Book1.xlsx", "Sheet1");
+    const rows = readSpreadSheet("src/__tests__/resources/Book1.xlsx", "Sheet1");
     expect(rows.length).toBe(2);
 })
 
 test('read csv file', () => {
-    const rows = readExcel("src/__tests__/resources/Book1.csv");
+    const rows = readSpreadSheet("src/__tests__/resources/Book1.csv");
     expect(rows.length).toBe(2);
 })
 
